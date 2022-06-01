@@ -161,13 +161,7 @@ class Header extends Component {
       );
     }
 
-    return (
-      <Link href="/login">
-        <a className="font-color-black login">
-          Login
-        </a>
-      </Link>
-    );
+    return;
   }
 
   render() {
@@ -184,12 +178,12 @@ class Header extends Component {
           }`}
         >
           <div className="d-none d-sm-flex">
-            <Link href="/collection">
+            {/* <Link href="/collection">
               <a className="mr-4 font-color-black">Shop</a>
             </Link>
             <Link href="/about">
               <a className="font-color-black">About</a>
-            </Link>
+            </Link> */}
           </div>
           <div className="logo-container">
             <img
@@ -201,7 +195,7 @@ class Header extends Component {
             <Link href="/">
               <a>
                 <img
-                  src="/images/commerce.svg"
+                  src="/images/logo-1.png"
                   className="logo cursor-pointer"
                   alt="Logo"
                 />
