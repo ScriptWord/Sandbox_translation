@@ -28,11 +28,19 @@ const mobileMenuLinks = [
     link: '/'
   },
   {
-    name: 'Shop',
+    name: 'Services',
     link: '/collection'
   },
   {
-    name: 'About',
+    name: 'Languages',
+    link: '/languages'
+  },
+  {
+    name: 'Blog',
+    link: '/about'
+  },
+  {
+    name: 'Contact Us',
     link: '/about'
   }
 ];
@@ -178,12 +186,21 @@ class Header extends Component {
           }`}
         >
           <div className="d-none d-sm-flex">
-            {/* <Link href="/collection">
-              <a className="mr-4 font-color-black">Shop</a>
+            <Link href="/">
+              <a className="mr-4 font-color-light">Home</a>
             </Link>
-            <Link href="/about">
-              <a className="font-color-black">About</a>
-            </Link> */}
+            <Link href="/collection">
+              <a className="mr-4 font-color-light"> Services</a>
+            </Link>
+            <Link href="/languages">
+              <a className="mr-4 font-color-light">Languages</a>
+            </Link>
+            <Link href="/collection">
+              <a className="mr-4 font-color-light">Blog</a>
+            </Link>
+            <Link href="/collection">
+              <a className="mr-4 font-color-light">Contact</a>
+            </Link>
           </div>
           <div className="logo-container">
             <img
@@ -202,7 +219,7 @@ class Header extends Component {
               </a>
             </Link>
           </div>
-          <div className="d-flex">
+          {/* <div className="d-flex">
             { process.browser && this.renderLoginLogout() }
             <div
               className="position-relative cursor-pointer"
@@ -213,7 +230,7 @@ class Header extends Component {
                 {cart.total_items}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Menu */}
@@ -237,7 +254,7 @@ class Header extends Component {
               >
                 {mobileMenuLinks.map((item, i) => (
                   <Link key={i} href={item.link}>
-                    <a className="d-block mb-4 font-size-heading font-color-white text-center">
+                    <a className="d-block mb-4 font-size-heading font-color-light text-center">
                       {item.name}
                     </a>
                   </Link>
